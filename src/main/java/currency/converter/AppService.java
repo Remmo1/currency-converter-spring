@@ -19,7 +19,7 @@ public class AppService {
         String fromCurrencyLowercase = convertRequest.from.toString().toLowerCase();
         String rate = apiProxy.getRateFromTheInternet(fromCurrencyLowercase, toCurrencyLowercase);
 
-        log.info("Rate {} -> {} is: {}. Counting in progress...", fromCurrencyLowercase, toCurrencyLowercase, rate);
+        log.info("Counting {} {} to {}", convertRequest.amount, fromCurrencyLowercase, toCurrencyLowercase);
         float exchangedValue = convertRequest.amount * Float.parseFloat(rate);
         return ConvertResponse.builder().rate(rate).exchanged(decimalFormat.format(exchangedValue)).build();
     }
