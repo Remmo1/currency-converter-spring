@@ -65,6 +65,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <imageName>remmo1/currency-converter-spring</imageName>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
